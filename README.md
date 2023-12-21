@@ -86,6 +86,10 @@ Fixed files `launch_fixed_[...].py` are scipts used to retrain multiple times a 
 - `--save`: If a path is given, results will be save there.
 - `--gpu_per_node`: Deprecated. All GPUs must be isolated within their node. (One process per GPU)
 
+### Search spaces
+
+Search spaces are found in `search_spaces.py` and defined according to `Zellij`.
+
 ### Execution with `mpirun`
 
 ```
