@@ -5,8 +5,8 @@ It can also be launched using `mpiexec` or `mpirun`.
 
 ## Installation
 
-One can face many issues installing SNN simulators on HPC clusters, they're might be conflict between `PyTorch` versions, CUDA and custom CUDA code of Lava-DL.
-We did not face cristical issues running Lava-DL and Bindsnet with `Pytorch v.2.0.1`.
+One can face many issues installing SNN simulators on HPC clusters. One could face conflicts between `PyTorch` versions, CUDA and custom CUDA code of Lava-DL.
+We did not face critical issues running Lava-DL and Bindsnet with `Pytorch v.2.0.1`.
 
 ### Bindsnet
 Bindsnet must be installed by hand following instructions found [here](https://bindsnet-docs.readthedocs.io/installation.html).
