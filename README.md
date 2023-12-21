@@ -44,8 +44,9 @@ Experiments use the in development [Zellij](https://github.com/ThomasFirmin/zell
 Please intall the Zellij version from [develop_t](https://github.com/ThomasFirmin/zellij/tree/develop_t) branch.
 An OPENMPI distribution is necessaary, parallelization is made using `mpi4py`.
 
+For the version used in these experiments:
 ```
-$ pip install https://github.com/ThomasFirmin/zellij/archive/develop_t.zip
+$ pip install -e ./zellij
 ```
 
 ## Running scripts
