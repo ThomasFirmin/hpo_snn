@@ -1,0 +1,2 @@
+This is a copy of the zellij version used for experiments. It might differs from the distributed one.
+It is under the same licence.
