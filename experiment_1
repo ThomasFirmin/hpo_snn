@@ -7,17 +7,6 @@
 # @License: CeCILL-C (http://www.cecill.info/index.fr.html)
 # @Copyright: Copyright (C) 2022 Thomas Firmin
 
-
-# @Author: Thomas Firmin <tfirmin>
-# @Date:   2022-10-03T10:18:51+02:00
-# @Email:  thomas.firmin@univ-lille.fr
-# @Project: Zellij
-# @Last modified by:   tfirmin
-# @Last modified time: 2023-05-19T18:03:04+02:00
-# @License: CeCILL-C (http://www.cecill.info/index.fr.html)
-# @Copyright: Copyright (C) 2022 Thomas Firmin
-
-
 from Lie.optim_diehl_and_cook import DiehlAndCook2015
 from Lie.objective import Objective
 from Lie.early_stoping import NonSpikingPercentageStopping
