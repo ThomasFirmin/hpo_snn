@@ -1,6 +1,6 @@
 # Parallel hyperparameter optimization of spiking neural networks
 
-Experiements are executed on the Jean Zay supercomputer using slurm scripts.
+Experiments are executed on the Jean Zay supercomputer using slurm scripts.
 It can also be launched using `mpiexec` or `mpirun`.
 
 ## Installation
@@ -9,7 +9,7 @@ One can face many issues installing SNN simulators on HPC clusters. One could fa
 We did not face critical issues running Lava-DL and Bindsnet with `Pytorch v.2.0.1`.
 
 ### Bindsnet
-Bindsnet must be installed by hand following instructions found [here](https://bindsnet-docs.readthedocs.io/installation.html).
+Bindsnet must be installed by hand, following instructions found [here](https://bindsnet-docs.readthedocs.io/installation.html).
 
 #### Locally installing network module
 Locally install `Lie` containing networks and other tools concerning the SNN part using Bindsnet with :
@@ -20,14 +20,14 @@ pip install -e ./Lie
 ### Lava and Lava-DL
 Lava-DL must be installed by hand following instructions found [here](https://lava-nc.org/lava/notebooks/in_depth/tutorial01_installing_lava.html).
 
-Compilation of the custom CUDA code is not thread safe. One can add following lines to their scripts to avoid issues:
+Compilation of the custom CUDA code is not thread safe. One can add the following lines to their scripts to avoid issues:
 
 ```python
 import os
 
 path = f"<YOUR_FOLDER>/torch_extension_mnist_{<PROCESS_RANK>}"
 if not os.path.exists(path):
-    os.makedirs(path)
+	os.makedirs(path)
 
 os.environ["TORCH_EXTENSIONS_DIR"] = path
 ```
@@ -41,8 +41,8 @@ pip install -e ./Lave
 ### Zellij
 
 Experiments use the in development [Zellij](https://github.com/ThomasFirmin/zellij/) version.
-Please intall the Zellij version from [develop_t](https://github.com/ThomasFirmin/zellij/tree/develop_t) branch.
-An OPENMPI distribution is necessaary, parallelization is made using `mpi4py`.
+Please install the Zellij version from [develop_t](https://github.com/ThomasFirmin/zellij/tree/develop_t) branch.
+An OPENMPI distribution is necessary, parallelization is made using `mpi4py`.
 
 For the version used in these experiments:
 ```
@@ -74,7 +74,7 @@ There are 4 scripts for the main experiments:
   - Training SLAYER
   - Simulator: LAVA-DL
 
-Fixed files `launch_fixed_[...].py` are scipts used to retrain multiple times a unique solution.
+Fixed files `launch_fixed_[...].py` are scripts used to retrain multiple times a unique solution.
 
 ### Options
 - `--data`: size of the dataset, `default=60000`
@@ -83,7 +83,7 @@ Fixed files `launch_fixed_[...].py` are scipts used to retrain multiple times a 
 - `--mpi`: `{synchronous, asynchronous, flexible}`. Use `flexible` for these experiments.
 - `--gpu`: If True use GPU.
 - `--record_time`: Record evaluation time for all SNNs.
-- `--save`: If a path is given, results will be save there.
+- `--save`: If a path is given, results will be saved there.
 - `--gpu_per_node`: Deprecated. All GPUs must be isolated within their node. (One process per GPU)
 
 ### Search spaces
@@ -99,3 +99,5 @@ mpiexec -machinefile <HOSTFILE> -rankfile <RANKFILE> -n 16 python3 experiment_1.
 ### Results
 
 Results of all 4 experiments are in the `results` folders.
+
+
